@@ -27,15 +27,15 @@
   cursor: pointer;
   margin-top: 25px;
   position: fixed;
-  width: 1830px;
-  height: 1010px;
+  width: calc(100% - 300px);
+  height: calc(100vh - 30px);
   margin-left: 150px;
   margin-right: 150px;
   
 }
 
 .window2 {
-  background-image: url(/images/background-h.jpg);
+  background-image: url(/images/background-h2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -48,30 +48,16 @@
   font-weight: bold;
   cursor: pointer;
   margin-top: 25px;
-  position: fixed;
-  width: 1830px;
-  height: auto;
+  width: calc(100% - 300px);
+  height: calc(100vh - 30px);
   margin-left: 150px;
   margin-right: 150px;
-  margin-bottom: 100px
+  max-height: 100vh;
+  overflow-y: auto;
+  
 }
 
 
-.video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.video-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0, 1);
-}
 
 .window {
   position: relative;
@@ -88,6 +74,8 @@ window.hover {
 window.active {
   background-color: #ccc;
 }
+
+
 
 .version {
   display: flex;
@@ -188,7 +176,6 @@ window.active {
   align-items: start;
   font-family: "Lexend Deca", sans-serif;
   color: #ffffff;
-  margin-top: 5rem;
   margin-left: 75px;
 }
 
@@ -518,7 +505,7 @@ window.active {
   display: flex;
   flex-direction: row;
   margin-left: 90px;
-  margin-top: 50px;
+
 }
 
 .Project-title h2 {
@@ -728,7 +715,7 @@ window.active {
   align-items: start;
   font-family: "Lexend Deca", sans-serif;
   color: #ffffff;
-  margin-top: 5rem;
+  margin-top: 40px;
   margin-left: 75px;
 }
 
@@ -1075,8 +1062,8 @@ window.active {
 }
 
 .Concept{
-  background-color: rgba(116, 115, 115, 0.3);
-  width: 820px;
+  background-color: rgba(46, 39, 39, 0.4);
+  width: 80vh;
   height: 160px;
   margin-left: 90px;
   font-size: 24;
@@ -1105,31 +1092,73 @@ window.active {
 }
 
 .img-project img{
-  width: 800px;
+  width: 820px;
   border-radius: 26px;
   
 }
 
 .Technologies{
-  background-color: rgba(116, 115, 115, 0.3);
+  background-color: rgba(46, 39, 39, 0.4);
   display: flex;
   font-family: "Lexend Deca", sans-serif;
   width: 820px;
   height: 140px;
-  margin-bottom: 100px;
   margin-top: 40px;
+  color:#ffffff;
+  justify-content: space-around;
 
 }
 
 .Technologies h2{
-  color:#ffffff;
   
 }
 
 .Technologies h3{
-  color:#ffffff;
+  
+  
 }
 
 .Technologies li{
-  color:#ffffff;
+  
 }
+
+.Frontend{
+    margin-left: 22px;
+}
+
+.Inspiration{
+  display: flex;
+  width:76vh;
+  height: 910px;
+  background-color: rgba(46, 39, 39, 0.4);
+  color: #ffffff;
+  margin-left: 950px;
+  margin-top: -753px;
+  flex-direction: column;
+  font-size: 17px;
+  margin-bottom: 22px;
+}
+
+.Inspiration h3 {
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  margin-left: 12px;
+  
+}
+
+.Inspiration p{
+    font-family: "Lexend Deca", sans-serif;
+    text-align: start;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .Inspiration img {
+    margin-top: 12px;
+    margin-left: 22px;
+    width: 740px;
+    margin-right: 12px;
+    border-radius: 22px;
+  }
