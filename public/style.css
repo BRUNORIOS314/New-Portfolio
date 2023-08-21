@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Lexend+Deca:wght@100&display=swap");
 
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -14,6 +14,7 @@
 
 .window {
   background-image: url(/images/background-h.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.606), rgba(0, 0, 0, 0)),url(/images/background-h.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -31,7 +32,6 @@
   height: calc(100vh - 30px);
   margin-left: 150px;
   margin-right: 150px;
-  
 }
 
 .window2 {
@@ -54,18 +54,15 @@
   margin-right: 150px;
   max-height: 100vh;
   overflow-y: auto;
+
   
 }
 
 
 
-.window {
-  position: relative;
-  z-index: 1;
-}
 
-.window::before {
-}
+
+
 
 window.hover {
   background-color: #ebebeb;
@@ -92,16 +89,15 @@ window.active {
 
 
 .Navbar {
+  width: 970px;
 }
 
-.name-nav {
-  display: flex;
-  justify-content: space-between;
-}
 
-.ul {
+.Navbar ul {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  height: 58px;
   font-size: 2rem;
   border-radius: 20px 0px 10px 90px;
   background-color: #000000;
@@ -122,21 +118,31 @@ window.active {
 }
 
 .ul li a:hover {
-  color: #00bfff;
+  
+  text-shadow:
+  0 0 7px deepskyblue,
+  /* 0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px deepskyblue,
+  0 0 82px deepskyblue,
+  0 0 92px deepskyblue,
+  0 0 102px deepskyblue, */
+  0 0 101px deepskyblue;
 }
 
 .Navbar-fake {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 2rem;
+  
 }
 
 .Navbar-fake ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  font-size: 2rem;
+  font-size: 3rem;
+  margin-right: 50px;
 }
 
 .Navbar-fake a {
@@ -157,13 +163,11 @@ window.active {
   flex-direction: row;
   justify-content: flex-end;
   font-size: 26px;
-  background-color: transparent;
   font-family: "Courier New", Courier, monospace;
+  
 }
 
-.ul-fake li {
-  margin-right: 60px;
-}
+
 
 .img {
   margin-top: 10%;
@@ -181,14 +185,17 @@ window.active {
 
 .div-title p{
   margin-top: 8px;
-}
-
+  
+    }
 .title {
-  font-size: 30px;
-  line-height: 39px;
+  font-size: 32px;
   font-family: "Lexend Deca";
   margin-bottom: 2rem;
   margin-left: 22px;
+}
+
+.div-title p{
+  font-weight: bold;
 }
 
 .data {
@@ -204,7 +211,19 @@ window.active {
   margin-top: 80px;
   margin-left: 22px;
   margin-bottom: 2rem;
-}
+  
+
+  text-shadow:
+  0 0 7px deepskyblue,
+  /* 0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px deepskyblue,
+  0 0 82px deepskyblue,
+  0 0 92px deepskyblue,
+  0 0 102px deepskyblue, */
+  0 0 101px deepskyblue;
+
+  }
 
 .data p {
   display: flex;
@@ -213,23 +232,23 @@ window.active {
   justify-content: start;
   font-family: "Audiowide", cursive;
   font-size: 24px;
-  color: #f6f4f4;
+  color:rgb(233, 233, 233);
   margin-left: 22px;
-}
-
-.buttons {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  width: 700px;
-  margin-top: 50px;
+  text-shadow:
+  0 0 3px rgba(233, 233, 233, 0.434),
+  /* 0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px deepskyblue,
+  0 0 82px deepskyblue,
+  0 0 92px deepskyblue,
+  0 0 102px deepskyblue, */
+  0 0 35px rgba(233, 233, 233, 0.329);
 }
 
 .button {
   display: inline-block;
-  padding: 12px 24px;
   border: 2px solid #343434;
-  border-radius: 10px;
+  border-radius: 55px;
   border: solid #343434;
   transition: all 0.2s ease-in;
   position: relative;
@@ -238,18 +257,91 @@ window.active {
   color: rgb(244, 240, 240);
   font-weight: bold;
   z-index: 1;
+  width: 180px;
+  height: 58px;
   background: transparent;
 }
 
 .button a {
+  padding-bottom: 30px;
   text-decoration: none;
   color: #eeeeee;
 }
 
-.margin {
+.button-margin{
+  display: inline-block;
+  border: 2px solid #343434;
+  border-radius: 55px;
+  border: solid #343434;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 22px;
+  color: rgb(244, 240, 240);
+  font-weight: bold;
+  z-index: 1;
+  width: 180px;
+  height: 58px;
+  background: transparent;
+  margin-right: 26px;
 }
 
-.button:before {
+.button-margin a{
+  padding-bottom: 30px;
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+
+.button-margin:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button-margin:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #010101;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button-margin:hover {
+  color: #ffffff;
+  border: 1px solid #060606;
+}
+
+.button-margin:hover:before {
+  top: -35%;
+  background-color: #0c0c0c;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button-margin:hover:after {
+  top: -45%;
+  background-color: #0c0c0c;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+.button-margin:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -303,16 +395,19 @@ window.active {
   flex-direction: column;
   align-items: flex-end;
   align-self: flex-end;
-  margin-top: 20rem;
   margin-right: 60px;
+  font-size: 55px;
 }
 
 .contact a {
-  margin-bottom: 16px;
   color: #ebebeb;
   text-decoration: none;
-  font-size: 46px;
   font-family: "Audiowide", cursive;
+}
+
+.contact img{
+  width: 50px;
+  margin-left: 12px;
 }
 
 /*skills*/
@@ -477,8 +572,6 @@ window.active {
   color: #ffffff;
 }
 
-.Container-5 img {
-}
 
 .Container-5 .image-container {
   display: flex;
@@ -509,9 +602,9 @@ window.active {
 }
 
 .Project-title h2 {
-  font-family: "Audiowide", cursive;
   color: #ffffff;
   margin-bottom:15px ;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .Project-title img {
@@ -527,6 +620,7 @@ window.active {
   height: 160px;
   margin-left: 90px;
   font-size: 24;
+  font-family: "Lexend Deca", sans-serif;
 
 }
 
@@ -535,6 +629,7 @@ window.active {
   display: flex;
   align-items: flex-start;
   margin-bottom: 10px;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .Concept p{
@@ -570,7 +665,6 @@ window.active {
 
 .Technologies h2{
   color:#ffffff;
-  
 }
 
 .Technologies h3{
@@ -600,21 +694,7 @@ window.active {
   filter: brightness(0, 2);
 }
 
-.window {
-  position: relative;
-  z-index: 1;
-}
 
-.window::before {
-}
-
-window.hover {
-  background-color: #ebebeb;
-}
-
-window.active {
-  background-color: #ccc;
-}
 
 .version {
   display: flex;
@@ -629,9 +709,6 @@ window.active {
 }
 
 
-
-.Navbar {
-}
 
 .name-nav {
   display: flex;
@@ -668,14 +745,15 @@ window.active {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 2rem;
+  margin-right: 3rem;
+  
 }
 
 .Navbar-fake ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  font-size: 2rem;
+  font-size: 24px;
 }
 
 .Navbar-fake a {
@@ -713,7 +791,6 @@ window.active {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  font-family: "Lexend Deca", sans-serif;
   color: #ffffff;
   margin-top: 40px;
   margin-left: 75px;
@@ -786,8 +863,6 @@ window.active {
   color: #eeeeee;
 }
 
-.margin {
-}
 
 .button:before {
   content: "";
@@ -843,16 +918,16 @@ window.active {
   flex-direction: column;
   align-items: flex-end;
   align-self: flex-end;
-  margin-top: 20rem;
-  margin-right: 60px;
+  margin-top: 300px;
+  
 }
 
 .contact a {
-  margin-bottom: 16px;
+  margin-top: 4rem;
   color: #ebebeb;
   text-decoration: none;
   font-size: 46px;
-  font-family: "Audiowide", cursive;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 /*skills*/
@@ -868,7 +943,8 @@ window.active {
   font-weight: bold;
   color: #ebebeb;
   display: flex;
-  font-size: 30px;
+  font-size: 36px;
+  margin-left: 42px;
 }
 
 .Container-skills {
@@ -880,9 +956,10 @@ window.active {
 .Container-1 {
   display: flex;
   flex-direction: column;
-  background-color: rgba(116, 115, 115, 0.3);
+  background-color: rgba(46, 39, 39, 0.4);
   margin-left: 60px;
   width: 750px;
+  height: 190px;
   justify-content: space-around;
 }
 
@@ -910,10 +987,11 @@ window.active {
 .Container-2 {
   display: flex;
   flex-direction: column;
-  background-color: rgba(116, 115, 115, 0.4);
+  background-color: rgba(46, 39, 39, 0.4);
   margin-right: 60px;
   width: 750px;
   color: #ffffff;
+  height: 190px;
 }
 
 .Container-2 h6 {
@@ -962,12 +1040,13 @@ window.active {
 .Container-3 {
   display: flex;
   flex-direction: column;
-  background-color: rgba(116, 115, 115, 0.3);
+  background-color: rgba(46, 39, 39, 0.4);
   width: 500px;
   justify-content: space-around;
   margin-left: 82px;
   text-align: center;
   color: #ffffff;
+  height: 190px;
 }
 
 .Container-3 h6 {
@@ -994,31 +1073,36 @@ window.active {
 .Container-4 {
   display: flex;
   flex-direction: column;
-  background-color: rgba(116, 115, 115, 0.3);
+  background-color: rgba(46, 39, 39, 0.4);
   width: 500px;
   align-items: center;
   text-align: center;
   color: #ffffff;
+  height: 190px;
 }
 
 .Container-4 img {
   width: 80px;
   height: 80px;
+  margin-top: 15px
+}
+
+.Container-4 h6{
+  margin-top: 20px;
 }
 
 .Container-5 {
   display: flex;
   flex-direction: column;
-  background-color: rgba(116, 115, 115, 0.3);
+  background-color: rgba(46, 39, 39, 0.4);
   margin-right: 78px;
   width: 500px;
   justify-content: space-around;
   text-align: center;
   color: #ffffff;
+  height: 190px;
 }
 
-.Container-5 img {
-}
 
 .Container-5 .image-container {
   display: flex;
@@ -1037,6 +1121,51 @@ window.active {
   font-family: "Audiowide", cursive;
   font-size: 22px;
   font-weight: bold;
+}
+
+.Container-skills3{
+  display: flex;
+}
+
+.Container-6 {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(46, 39, 39, 0.4);
+  margin-left: 90px;
+  width: 750px;
+  height: 200px;
+  margin-top: 22px;
+  margin-right: 78px;
+  margin-left: 82px;
+  
+}
+
+.Container-6 p{
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #e8e5e5;
+  font-size: 22px;
+}
+
+.Container-7 {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(46, 39, 39, 0.4);
+  margin-left: 60px;
+  width: 750px;
+  justify-content: flex-end;
+  margin-top: 22px;
+  height: 200px;
+
+}
+
+.Container-7 p{
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #e8e5e5;
+  font-size: 22px;
 }
 
 /*proyecto*/
@@ -1064,88 +1193,152 @@ window.active {
 .Concept{
   background-color: rgba(46, 39, 39, 0.4);
   width: 80vh;
-  height: 160px;
+  height: 175px;
   margin-left: 90px;
-  font-size: 24;
 
 }
 
 .Concept h2{
-  color: #ffffff;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+  margin-left: 20px;
+  margin-top: 16px;
+  background: linear-gradient(to right, #fe9216, #17f8f8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  font-weight: bold;
 }
 
 .Concept p{
   font-family: "Lexend Deca", sans-serif;
   color: #ffffff;
-  font-size: 17px;
+  font-size: 20px;
   background-color: transparent;
   justify-content: center;
+  text-align: start;
+  margin-left: 20px;
+  margin-top: 22px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .img-project{
   display: flex;
   margin-left:90px ;
-  margin-top: 22px;
+
 }
 
 .img-project img{
   width: 820px;
   border-radius: 26px;
-  
 }
 
 .Technologies{
-  background-color: rgba(46, 39, 39, 0.4);
+  background-color: rgb(48, 48, 48,0.4);
   display: flex;
-  font-family: "Lexend Deca", sans-serif;
-  width: 820px;
-  height: 140px;
+  width: 80vh;
+  height: 160px;
   margin-top: 40px;
   color:#ffffff;
-  justify-content: space-around;
-
-}
-
-.Technologies h2{
+  justify-content: flex-start;
   
 }
 
-.Technologies h3{
+.Technologies-div h2 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  margin-left:22px;
+  margin-top: 12px;
+  background: linear-gradient(to right, #fe9216, #e38c36);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  font-weight: bold;
   
-  
+
 }
 
-.Technologies li{
+.Technologies-div h3{
+font-weight: 600;
+align-items: flex-start;
+font-size: 22px;
+
+}
+
+.Technologies-div h2{
+  font-weight: 900;
+  font-weight: bold;
+  font-size: 32px;
   
+  
+  }
+
+  .Technologies-div ul {
+    list-style: none;
+  }
+
+.Technologies-div li{
+  font-size: 19px;
+  margin-left: -30px;
 }
 
 .Frontend{
-    margin-left: 22px;
+  margin-left: 22px;
+  margin-top: 50px;
+  text-align: center;
+  
+  
+  
 }
+
+.Frontend ul{
+  list-style: none;
+  margin-left: -24px;
+} 
+
+.Frontend h3{
+  font-weight: 600;
+  margin-top: 12px;
+  font-size: 22px;
+
+}
+
+.Frontend li{
+  font-size: 19px;
+}
+
 
 .Inspiration{
   display: flex;
   width:76vh;
-  height: 910px;
+  height: 1000px;
   background-color: rgba(46, 39, 39, 0.4);
   color: #ffffff;
   margin-left: 950px;
-  margin-top: -753px;
+  margin-top: -800px;
   flex-direction: column;
   font-size: 17px;
   margin-bottom: 22px;
+  overflow: hidden;
 }
 
 .Inspiration h3 {
-  color: #ffffff;
   display: flex;
   align-items: flex-start;
   margin-bottom: 10px;
-  margin-left: 12px;
-  
+  margin-left: 20px;
+  margin-top: 12px;
+  background: linear-gradient(to right, #fe9216, #17f8f8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  font-weight: bold;
 }
 
 .Inspiration p{
@@ -1153,12 +1346,21 @@ window.active {
     text-align: start;
     margin-left: 20px;
     margin-right: 20px;
+  font-size: 20px;
   }
 
   .Inspiration img {
-    margin-top: 12px;
     margin-left: 22px;
     width: 740px;
     margin-right: 12px;
     border-radius: 22px;
   }
+
+
+
+
+
+
+
+
+  
