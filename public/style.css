@@ -1358,6 +1358,32 @@ font-size: 22px;
 
 
 
+  /*--mediqueries--*/
+
+  @media (max-width: 480px) {
+    /* header */
+    
+  }
+  /* Estilos para pantallas pequeñas */
+
+
+@media (max-width: 767px) {
+}
+/* Estilos para pantallas pequeñas en modo landscape */
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+/* Estilos para tabletas */
+
+
+@media (min-width: 1025px) {
+}
+/* Estilos para pantallas de escritorio */
+
+
+
+
 
 
 
