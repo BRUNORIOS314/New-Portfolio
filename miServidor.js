@@ -1,19 +1,26 @@
 const express = require('express');
-const path = require('path');
-const { start } = require('repl');
-
 const app = express();
-const puerto = 3000;
+const path = require('path');
 
-// Configurar el middleware para servir archivos estáticos
+// Configura la carpeta donde se encuentran los archivos estáticos (HTML, CSS, JS, imágenes, etc.).
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Ruta para la página principal
+// Ruta para manejar solicitudes a la página de inicio.
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, + '/public/index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Iniciar el servidor
+// Escucha en el puerto 3000 (o el puerto que desees).
+const puerto = 3000;
 app.listen(puerto, () => {
-    console.log(`El servidor está escuchando en el puerto ${puerto}`);
+  console.log(`Servidor Express escuchando en el puerto ${puerto}`);
+});
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Agrega este manejador de errores después de configurar express.static
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Error interno del servidor');
 });

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node miServidor.js"
+    "start": "nodemon miServidor.js"
   },
   "author": "",
   "license": "ISC",
