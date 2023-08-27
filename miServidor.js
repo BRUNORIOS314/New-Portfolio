@@ -24,7 +24,3 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Error interno del servidor');
 });
-
-let num = 4 
-
-console.log(num);
